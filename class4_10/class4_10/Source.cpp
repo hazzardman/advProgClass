@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	int size = 10;
+	int size = 100;
 	vector<string> names(size);
 	vector<string> schools(size);
 	vector<string> medals(size);
@@ -67,6 +67,7 @@ int main()
 			n++;
 			o++;
 		}
+		file2.close();
 	}
 	
 	
