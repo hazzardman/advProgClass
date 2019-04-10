@@ -1,0 +1,5 @@
+4
+alice	hccvc	gold
+bob	ut	silver
+charlie	rice	bronze
+dan	hcc	silver
