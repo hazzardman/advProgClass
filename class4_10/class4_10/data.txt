@@ -1,12 +1,4 @@
-12
-alice	hcc	gold
-bob	UH	silver
-charlie	Rice	bronze
-dan	hcc	silver
-alice	hcc	gold
-bob	UH	silver
-charlie	Rice	gold
-dan	hcc	silver
+4
 Kate	UH	bronze
 Bob	UT	gold
 John	UH	silver
