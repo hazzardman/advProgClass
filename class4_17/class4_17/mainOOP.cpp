@@ -1,41 +1,42 @@
 #pragma warning(disable:4996)
 #include <iostream>
-#include <string>
-#include<vector>
-#include<map>
-#include <fstream> 
 using namespace std;
+
+static int entrySize = 32;
 
 class StuRecord
 {
 	unsigned int id;
-	string name;
-	string major;
-	string email;
-
+	
+	char* name = (char*)malloc(sizeof(char) * entrySize);
+	char* major = (char*)malloc(sizeof(char) * entrySize);
+	char* email = (char*)malloc(sizeof(char) * entrySize);
+	/*
+	*/
 public:
 	StuRecord(int _id)
 	{
 		id = _id;
-		name = "";
-		major = "undetermined";
-		email = "";
+		strcpy(name, "");
+		strcpy(major, "undetermined");
+		strcpy(email, "");
+		
 	}
 	void print()
 	{
 		cout << name << "\t" << id << "\t" << major << "\t" << email << endl;
 	}
-	void setName(string _name)
+	void setName(char* _name)
 	{
-		name.assign(_name);
+		strcpy(name, _name);
 	}
-	void setMajor(string _major)
+	void setMajor(char* _major)
 	{
-		major.assign(_major);
+		strcpy(major, _major);
 	}
-	void setEmail(string _email)
+	void setEmail(char* _email)
 	{
-		email.assign(_email);
+		strcpy(email, _email);
 	}
 };
 
@@ -125,7 +126,7 @@ int main()
 		cin >> input;
 		if (input == '1')
 		{
-			string entry;
+			char* entry=(char*)malloc(sizeof(char)*entrySize);
 			StuRecord* p = directory.create();
 			cout << "Enter Name:";
 			cin >> entry;
@@ -160,6 +161,5 @@ int main()
 		}
 	}
 
-	//getchar();
 	return 0;
 }

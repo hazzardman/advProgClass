@@ -1,17 +1,16 @@
 #pragma warning(disable:4996)
 #include <iostream>
-#include <string>
-#include<vector>
-#include<map>
-#include <fstream> 
 using namespace std;
+
+static int entrySize = 32;
+
 
 struct StuRecord
 {
 	unsigned int id;
-	char name[32] ="";
-	char major[32] ="";
-	char email[32] ="";
+	char* name = (char*)malloc(sizeof(char) * entrySize);
+	char* major = (char*)malloc(sizeof(char) * entrySize);
+	char* email = (char*)malloc(sizeof(char) * entrySize);
 
 
 };
@@ -19,7 +18,7 @@ struct StuRecord
 
 void create(StuRecord *directory, bool *directoryUsage, int array_size)
 {
-	char entry[32];
+	char* entry = (char*)malloc(sizeof(char) * entrySize);
 	for (int i = 0; i < array_size; i++)
 	{
 		if (directoryUsage[i] == false)
@@ -27,7 +26,7 @@ void create(StuRecord *directory, bool *directoryUsage, int array_size)
 			directoryUsage[i] = true;
 			cout << "Enter Name:";
 			getchar();					//so that it waits for entry
-			cin.getline(entry, 32);		//accepts spaces for full name
+			cin.getline(entry, entrySize);		//accepts spaces for full name
 			strcpy(directory[i].name,entry);	//used char arrays because I couldnt get rid of access violation when assigning string here
 			cout << "Enter Major:";		
 			cin >> entry;
@@ -96,6 +95,5 @@ int main()
 		}
 	}
 
-	//getchar();
 	return 0;
 }
