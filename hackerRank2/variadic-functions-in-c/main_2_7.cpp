@@ -8,15 +8,38 @@
 int  sum(int count, ...) {
 	va_list vals;
 	va_start(vals, count);
-	int sum = va_arg(vals, int);
+	int sum = 0;
+	for (int i = 0; i < count; i++)
+	{
+		sum+= va_arg(vals, int);
+	}
+	return sum;
 }
 
 int min(int count, ...) {
-
+	va_list vals;
+	va_start(vals, count);
+	int min = va_arg(vals, int);
+	for (int i = 0; i < count; i++)
+	{
+		int tmp = va_arg(vals, int);
+		if(tmp<min)
+			min = tmp;
+	}
+	return min;
 }
 
 int max(int count, ...) {
-
+	va_list vals;
+	va_start(vals, count);
+	int max = va_arg(vals, int);
+	for (int i = 0; i < count; i++)
+	{
+		int tmp = va_arg(vals, int);
+		if (tmp > max)
+			max = tmp;
+	}
+	return max;
 }
 
 int test_implementations_by_sending_three_elements() {
