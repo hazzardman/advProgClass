@@ -1,5 +1,5 @@
 4
 Kate	UH	bronze
 Bob	UT	gold
-John	UH	silver
+John	ABCD	silver
 Amy	Rice	silver

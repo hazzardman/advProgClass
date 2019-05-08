@@ -1,4 +1,5 @@
 school	gold	silver	bronze
+ABCD	0	1	0
 Rice	0	1	0
-UH	0	1	1
+UH	0	0	1
 UT	1	0	0
