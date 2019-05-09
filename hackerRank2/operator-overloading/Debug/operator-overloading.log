@@ -1,0 +1,5 @@
+﻿  main_2_26.cpp
+c:\users\w203437343\documents\github\advprogclass\hackerrank2\operator-overloading\main_2_26.cpp(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\w203437343\documents\github\advprogclass\hackerrank2\operator-overloading\main_2_26.cpp(19): warning C4018: '<': signed/unsigned mismatch
+  operator-overloading.vcxproj -> C:\Users\w203437343\Documents\GitHub\advProgClass\hackerRank2\Debug\operator-overloading.exe
+  operator-overloading.vcxproj -> C:\Users\w203437343\Documents\GitHub\advProgClass\hackerRank2\Debug\operator-overloading.pdb (Partial PDB)

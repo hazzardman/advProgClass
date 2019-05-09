@@ -6,9 +6,10 @@
 using namespace std;
 class Matrix
 {
+
 public:
 	vector<vector<int>> a;
-	Matrix & operator +(Matrix const &other)
+	Matrix operator +(Matrix const &other)
 	{
 		Matrix result;
 		for (int i = 0; i<a.size(); i++) 
@@ -23,8 +24,7 @@ public:
 			result.a.push_back(b);
 		}
 		return result;
-		//this times out. the solution found in the discussion board modifies internal values of class and passes a pointer but that seems reckless to change your input if you intend to output the change
-	}
+		}
 };
 int main() {
 	int cases, k;

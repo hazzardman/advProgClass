@@ -10,7 +10,7 @@ struct Traits<Color>
 	Color name;
 };
 template<>
-struct Traits<Color>
+struct Traits<Fruit>
 {
 	Fruit name;
 };
