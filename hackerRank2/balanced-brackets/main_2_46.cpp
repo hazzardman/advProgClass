@@ -28,11 +28,11 @@ char* isBalanced(char* s) {
 	{
 		if (s[i] == '[' || s[i] == '{' || s[i] == '(')
 			openBrak[numOpen++] = s[i];
-		else if (s[i] = ']'&&openBrak[numOpen - 1] == '[')
+		else if (s[i] == ']'&&openBrak[numOpen - 1] == '[')
 			numOpen--;
-		else if (s[i] = '}'&&openBrak[numOpen - 1] == '{')
+		else if (s[i] == '}'&&openBrak[numOpen - 1] == '{')
 			numOpen--;
-		else if (s[i] = ')'&&openBrak[numOpen - 1] == '(')
+		else if (s[i] == ')'&&openBrak[numOpen - 1] == '(')
 			numOpen--;
 		else
 		{

@@ -22,10 +22,10 @@ char** split_string(char*);
 //
 int* circularArrayRotation(int a_count, int* a, int k, int queries_count, int* queries, int* result_count) {
 	*result_count = queries_count;
-	int*results = (int*)malloc(sizeof(int)*(*result_count));
-	for (int i = 0; i < *result_count; i++)
+	int* results = (int*)malloc(sizeof(int)*queries_count);
+	for (int i = 0; i < queries_count; i++)
 	{
-		int shift = queries[i + k];
+		int shift = queries[i]+k;
 		while (shift <= a_count)
 			shift -= a_count;
 		results[i] = a[shift];
